@@ -1,0 +1,373 @@
+.home {
+  background-color: #fffbeb;
+}
+
+.document-container {
+  max-width: 1190px;
+  margin: 2rem auto;
+  text-align: justify;
+  padding: 5rem 1.7rem 0.2rem 1.7rem;
+  line-height: 1.8;
+  color: black;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: black;
+}
+
+.contents {
+  font-size: 2rem;
+}
+
+.paragraph {
+  margin-bottom: 30px;
+}
+
+.section-titles {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.subsection-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.intro {
+  padding: 0rem 1.7rem 0.2rem 1.7rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  line-height: 1.8;
+  color: black;
+  font-size: 2rem;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.intro-title {
+  margin-bottom: 2rem;
+}
+
+.intro-title span {
+  font-size: 1.7rem;
+}
+
+.intro-title h3 {
+  display: inline;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.document-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0rem 1.7rem 1rem 1.7rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+}
+
+.header {
+  color: black;
+  padding: 0;
+  text-align: left;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.header-subtitle {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.header-description {
+  font-size: 2rem;
+  color: black;
+  text-align: left;
+}
+
+.content {
+  padding: 0;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+}
+
+.text-content {
+  color: black;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.highlight-section {
+  border-radius: 0.75rem;
+  padding: 0;
+}
+
+.village-section {
+  border-radius: 0.75rem;
+  padding: 0;
+}
+
+.strategy-section {
+  border-radius: 0.75rem;
+  padding: 0;
+}
+
+.callout-box {
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.callout-text {
+  font-weight: 600;
+  color: black;
+}
+
+.info-box {
+  border-radius: 0.5rem;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.info-box h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.info-box p {
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.emphasis-text {
+  font-weight: 600;
+  color: black;
+  margin-top: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.stat-label {
+  font-weight: 600;
+  color: black;
+}
+
+.stat-value {
+  color: black;
+}
+
+.project-box {
+  border-radius: 0.75rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.project-box h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.project-box p {
+  color: black;
+  line-height: 1.8;
+  font-size: 2rem;
+}
+
+.objectives {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.objective-item h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.objective-item p {
+  font-size: 2rem;
+}
+
+.objectives-list p {
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.strategy-objectives {
+  margin-top: 1.5rem;
+}
+
+.strategy-objectives h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.objective-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: black;
+  line-height: 1.5;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.quote-box {
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.quote-box p {
+  font-weight: 600;
+  color: black;
+  font-style: italic;
+}
+
+.closing-statement {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.home .footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 2px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+.footer p {
+  color: #6b7280;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.scroll-to-top:hover {
+  background-color: #000;
+  transform: scale(1.1);
+}
