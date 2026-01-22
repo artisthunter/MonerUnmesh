@@ -628,7 +628,7 @@
 }
 
 .text-content strong {
-  color: #667eea;
+  color: #7B3F00;
   font-weight: 700;
 }
 
@@ -793,7 +793,8 @@
   box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
 }
 
-.clean-list {
+.clean-list,
+.clean-lists {
   list-style: none;
   padding: 0;
   margin: 2rem 0;
@@ -809,13 +810,29 @@
 .clean-list li {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #F8F9FF 50%, #F2F4FF 100%);
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   border-left: 4px solid #667eea;
   font-size: 1.7rem;
   line-height: 1.8;
   transition: all 0.3s ease;
+}
+
+.clean-lists li{
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #F8F9FF 50%, #F2F4FF 100%);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 12rem auto; 
+  column-gap: 1.5rem;
+  align-items: start;
 }
 
 .clean-list li:hover {
