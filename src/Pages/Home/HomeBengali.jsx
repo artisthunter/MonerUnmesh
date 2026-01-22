@@ -708,7 +708,7 @@ const HomeBengali = () => {
             </button>
           </div>
 
-          <div className="slogans">
+          <div className="slogans1">
             মনের উন্মেষ হল
             <br />
             উপনিষদের শিক্ষা এবং Cognitive Science এর জ্ঞানের মিথষ্ক্রিয়ায়
