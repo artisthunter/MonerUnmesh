@@ -646,7 +646,7 @@ const HomeBengali = () => {
 
   return (
     <div className="home">
-      {/*<Visitor />*/}
+      <Visitor />
       <div className="logo">
         <div className="dialogue1">
           <p>মনের</p>
@@ -708,7 +708,7 @@ const HomeBengali = () => {
             </button>
           </div>
 
-          <div className="slogans1">
+          <div className="slogans">
             মনের উন্মেষ হল
             <br />
             উপনিষদের শিক্ষা এবং Cognitive Science এর জ্ঞানের মিথষ্ক্রিয়ায়
@@ -720,10 +720,8 @@ const HomeBengali = () => {
             <br />
             বিষয়বস্তুতে নজর দেওয়া শেখায় না
             <br />
-            নজরের ভিতরে বোধ জাগিয়ে তোলে।{" "}
-            <span style={{ fontSize: "30px" }}>
-              ।। যোগীরাজ শ্রী অলোক কুমার দাস ।।
-            </span>
+            নজরের ভিতরে বোধ জাগিয়ে তোলে। 
+            <span>।। যোগীরাজ শ্রী অলোক কুমার দাস ।।</span>
           </div>
 
           <div className="slogans">
@@ -1231,7 +1229,7 @@ const HomeBengali = () => {
             <br />
             <br />
             <strong>দুইয়ের মিলন :-</strong>
-            <ul className="clean-lists">
+            <ul className="clean-list">
               <li>
                 <span>উপনিষদ</span>
                 <span>Cognitive science</span>

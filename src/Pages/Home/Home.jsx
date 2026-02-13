@@ -261,7 +261,7 @@ const Home = () => {
 
   useEffect(() => {
     const videos = document.querySelectorAll(
-      ".video1 video, .video2 video, .video3 video, .video4 video"
+      ".video1 video, .video2 video, .video3 video, .video4 video",
     );
 
     videos.forEach((video) => {
@@ -297,7 +297,7 @@ const Home = () => {
 
     const observer = new IntersectionObserver(
       observerCallback,
-      observerOptions
+      observerOptions,
     );
 
     videos.forEach((video) => {
@@ -650,50 +650,49 @@ const Home = () => {
   return (
     <div className="home">
       <Visitor />
-      <div className="logo">
-        <div className="dialogue1">
-          <p>Moner</p>
-        </div>
-        <div className="dialogue2">
-          <p>Unmesh</p>
-        </div>
-        <div className="logo1">
-          <img src={logo1} alt="Logo" />
-        </div>
-        <div className="dialogue3">
-          <p>সারল্য পূর্ণ নন্দন তত্ত্ব</p>
-          <p>&nbsp; &nbsp; পরিপাটি যুক্ত নন্দন তত্ত্বের নিকট</p>
-          <p>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; ময়লা তত্ত্ব হিসেবে পরিচিত।
-          </p>
-        </div>
-        <div className="logo2">
-          <div className="first">
+      <div className="header">
+        <div className="dialogue">
+          <div className="dialogue1">
             <p>Moner</p>
-            <p>
-              {"\u00A0"}
-              {"\u00A0"}
-              {"\u00A0"}Unmesh
-            </p>
           </div>
-          <img src={logo2} alt="Logo" />
-          <div className="last">
-            <p className="a">Alternative</p>
-            <p className="b">&nbsp; &nbsp; &nbsp; Education</p>
-            <p className="c">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System</p>
+          <div className="dialogue2">
+            <p>Unmesh</p>
           </div>
         </div>
-        <div className="logo3">
-          <div className="firsts">
-            <img src={first} />
+        <div className="logo">
+          <div className="logo2">
+            <div className="first">
+              <p className="firstone">Moner</p>
+              <p className="firsttwo">Unmesh</p>
+            </div>
+            <div className="left-img">
+              <img src={logo2} alt="Logo" />
+            </div>
+            <div className="last">
+              <p className="lastone">Alternative</p>
+              <p className="lasttwo">Education</p>
+              <p className="lastthree">System</p>
+            </div>
           </div>
-          <div className="seconds">
-            <img src={second} />
+          <div className="logo1">
+            <img className="logo1-img" src={logo1} alt="Logo" />
+            <p className="dialogue3one">সারল্য পূর্ণ নন্দন তত্ত্ব</p>
+            <p className="dialogue3two">পরিপাটি যুক্ত নন্দন তত্ত্বের নিকট</p>
+            <p className="dialogue3three">ময়লা তত্ত্ব হিসেবে পরিচিত।</p>
           </div>
-          <img src={logo2} alt="Logo" />
-          <div className="lasts">
-            <img src={last} />
+          <div className="logo3">
+            <div className="firsts">
+              <img src={first} />
+            </div>
+            <div className="seconds">
+              <img src={second} />
+            </div>
+            <div className="right-img">
+              <img src={logo2} alt="Logo" />
+            </div>
+            <div className="lasts">
+              <img src={last} />
+            </div>
           </div>
         </div>
       </div>
