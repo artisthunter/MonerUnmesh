@@ -103,7 +103,7 @@
   position: relative;
   opacity: 0;
   bottom: 9.5vw;
-  left: -20vw;
+  left: -22vw;
   animation: slideLefttwo 4s ease-out 4s forwards;
 }
 
@@ -124,7 +124,7 @@
   position: relative;
   opacity: 0;
   bottom: 10.5vw;
-  left: -12vw;
+  left: -15vw;
   animation: slideLeftthree 4s ease-out 8s forwards;
 }
 
