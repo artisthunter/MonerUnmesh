@@ -30,7 +30,7 @@
   .visitor-dashboard{
     position: fixed;
     width: 240px;
-    top: 83vw;
+    top: 70vw;
   }
 }
 
@@ -38,7 +38,7 @@
   .visitor-dashboard{
     position: fixed;
     width: 240px;
-    top: 151vw;
+    top: 110vw;
   }
 }
 
@@ -46,7 +46,7 @@
   .visitor-dashboard{
     position: fixed;
     width: 240px;
-    top: 171vw;
+    top: 110vw;
   }
 }
 
@@ -54,6 +54,6 @@
   .visitor-dashboard{
     position: fixed;
     width: 240px;
-    top: 201vw;
+    top: 120vw;
   }
 }
