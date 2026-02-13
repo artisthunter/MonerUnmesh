@@ -1,7 +1,7 @@
 .visitor-dashboard {
   position: fixed;
-  bottom: 30px;              
-  left: 20px;
+  top: 100px;              
+  left: 16px;
   background: white;
   padding: 1rem 1.2rem;
   width: 240px;
@@ -17,4 +17,19 @@
   margin: 1px 0;
   font-size: 1.05rem;
   font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .visitor-dashboard{
+    width: 150px;
+    top: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visitor-dashboard{
+    position: fixed;
+    width: 240px;
+    top: 630px;
+  }
 }

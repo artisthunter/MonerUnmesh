@@ -40,17 +40,17 @@ const Visitor = () => {
       </div>
 
       <div className="vd-item">
-        <span>This Month's Visitor:</span>
+        <span>This Month Visitor:</span>
         <CountUp start={0} end={data.month} duration={1.2} />
       </div>
 
       <div className="vd-item">
-        <span>This Year's Visitors:</span>
+        <span>This Year Visitors:</span>
         <CountUp start={0} end={data.year} duration={1.2} />
       </div>
 
       <div className="vd-item">
-        <span>All Time Visitors:</span>
+        <span>All Visitors:</span>
         <CountUp start={0} end={data.allTime} duration={1.2} />
       </div>
     </div>
