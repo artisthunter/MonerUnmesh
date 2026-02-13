@@ -1500,6 +1500,13 @@
 
 /* Extra small mobile */
 @media (max-width: 375px) {
+  .lasts-img {
+    position: relative;
+    bottom: 10vw;
+    width: 7vw;
+    height: auto;
+  }
+
   .main-card {
     padding: 1rem;
   }
