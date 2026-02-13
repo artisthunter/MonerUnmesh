@@ -1,7 +1,7 @@
 .visitor-dashboard {
   position: fixed;
-  top: 100px;              
-  left: 16px;
+  top: 6.5vw;              
+  left: 1vw;
   background: white;
   padding: 1rem 1.2rem;
   width: 240px;
@@ -22,7 +22,7 @@
 @media (max-width: 1024px) {
   .visitor-dashboard{
     width: 150px;
-    top: 90px;
+    top: 8.5vw;
   }
 }
 
@@ -30,6 +30,30 @@
   .visitor-dashboard{
     position: fixed;
     width: 240px;
-    top: 630px;
+    top: 83vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .visitor-dashboard{
+    position: fixed;
+    width: 240px;
+    top: 151vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .visitor-dashboard{
+    position: fixed;
+    width: 240px;
+    top: 171vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .visitor-dashboard{
+    position: fixed;
+    width: 240px;
+    top: 201vw;
   }
 }
