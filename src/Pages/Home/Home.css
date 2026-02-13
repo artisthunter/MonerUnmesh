@@ -2,18 +2,18 @@
   background-color: #fffbeb;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: column;
   height: 50vw;
 }
 
-.dialogue{
+.dialogue {
   display: flex;
   flex-direction: row;
 }
 
-.dialogue1{
+.dialogue1 {
   color: #461f05;
   font-size: 10vw;
   font-weight: 300;
@@ -31,7 +31,7 @@
   }
 }
 
-.dialogue2{
+.dialogue2 {
   color: #461f05;
   font-size: 10vw;
   font-weight: 300;
@@ -49,17 +49,17 @@
   }
 }
 
-.logo{
+.logo {
   display: flex;
   flex-direction: row;
 }
 
-.logo1{
+.logo1 {
   display: flex;
   flex-direction: column;
 }
 
-.logo1-img{
+.logo1-img {
   width: 30vw;
   height: auto;
   animation: fadeScale 5s ease-out forwards;
@@ -76,7 +76,7 @@
   }
 }
 
-.dialogue3one{
+.dialogue3one {
   font-size: 2.4vw;
   font-weight: 500;
   color: #461f05;
@@ -98,7 +98,7 @@
   }
 }
 
-.dialogue3two{
+.dialogue3two {
   font-size: 2.4vw;
   font-weight: 500;
   color: #461f05;
@@ -120,7 +120,7 @@
   }
 }
 
-.dialogue3three{
+.dialogue3three {
   font-size: 2.4vw;
   font-weight: 500;
   color: #461f05;
@@ -142,7 +142,7 @@
   }
 }
 
-.logo2{
+.logo2 {
   display: flex;
   padding-right: 10vw;
   flex-direction: column;
@@ -160,12 +160,12 @@
   }
 }
 
-.left-img img{
+.left-img img {
   width: 15vw;
   height: auto;
 }
 
-.firstone{
+.firstone {
   font-size: 2vw;
   font-weight: 500;
   color: #461f05;
@@ -174,7 +174,7 @@
   left: 9vw;
 }
 
-.firsttwo{
+.firsttwo {
   font-size: 2vw;
   font-weight: 500;
   color: #461f05;
@@ -183,7 +183,7 @@
   left: 10.5vw;
 }
 
-.lastone{
+.lastone {
   font-size: 1vw;
   font-weight: 500;
   color: #461f05;
@@ -192,7 +192,7 @@
   left: 1vw;
 }
 
-.lasttwo{
+.lasttwo {
   font-size: 1vw;
   font-weight: 500;
   color: #461f05;
@@ -201,7 +201,7 @@
   left: 2vw;
 }
 
-.lastthree{
+.lastthree {
   font-size: 1vw;
   font-weight: 500;
   color: #461f05;
@@ -210,7 +210,7 @@
   left: 3vw;
 }
 
-.logo3{
+.logo3 {
   display: flex;
   padding-left: 10vw;
   flex-direction: column;
@@ -228,39 +228,30 @@
   }
 }
 
-.right-img img{
+.right-img img {
   width: 15vw;
   height: auto;
 }
 
-.firsts{
+.firstsone {
   position: relative;
-  top: 14vw;
+  top: 11vw;
   left: 9vw;
-}
-
-.firsts img{
   width: 5vw;
   height: auto;
 }
 
-.seconds{
+.firststwo {
   position: relative;
   top: 13vw;
-  left: 10vw;
-}
-
-.seconds img{
+  left: 5vw;
   width: 5vw;
   height: auto;
 }
 
-.lasts{
+.lasts-img {
   position: relative;
   bottom: 8vw;
-}
-
-.lasts img{
   width: 7vw;
   height: auto;
 }
@@ -1458,6 +1449,13 @@
 }
 
 @media (max-width: 425px) {
+  .lasts-img {
+    position: relative;
+    bottom: 9.5vw;
+    width: 7vw;
+    height: auto;
+  }
+
   .pic1,
   .pic2,
   .pic3,

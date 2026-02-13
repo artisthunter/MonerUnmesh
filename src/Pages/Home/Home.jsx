@@ -682,16 +682,14 @@ const Home = () => {
           </div>
           <div className="logo3">
             <div className="firsts">
-              <img src={first} />
-            </div>
-            <div className="seconds">
-              <img src={second} />
+              <img className="firstsone" src={first} />
+              <img className="firststwo" src={second} />
             </div>
             <div className="right-img">
               <img src={logo2} alt="Logo" />
             </div>
             <div className="lasts">
-              <img src={last} />
+              <img className="lasts-img" src={last} alt="Last Logo" />
             </div>
           </div>
         </div>
