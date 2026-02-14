@@ -647,53 +647,51 @@ const HomeBengali = () => {
   return (
     <div className="home">
       <Visitor />
-      <div className="logo">
-        <div className="dialogue1">
-          <p>মনের</p>
-        </div>
-        <div className="dialogue2">
-          <p>উন্মেষ</p>
-        </div>
-        <div className="logo1">
-          <img src={logo1} alt="Logo" />
-        </div>
-        <div className="dialogue3">
-          <p>সারল্য পূর্ণ নন্দন তত্ত্ব</p>
-          <p>&nbsp; &nbsp; পরিপাটি যুক্ত নন্দন তত্ত্বের নিকট</p>
-          <p>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; ময়লা তত্ত্ব হিসেবে পরিচিত।
-          </p>
-        </div>
-        <div className="logo2">
-          <div className="first">
-            <p>Moner</p>
-            <p>
-              {"\u00A0"}
-              {"\u00A0"}
-              {"\u00A0"}Unmesh
-            </p>
+      <div className="header">
+        <div className="dialogue">
+          <div className="dialogue3">
+            <p>মনের</p>
           </div>
-          <img src={logo2} alt="Logo" />
-          <div className="last">
-            <p>Alternative</p>
-            <p>&nbsp; &nbsp; &nbsp; Education</p>
-            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System</p>
+          <div className="dialogue4">
+            <p>উন্মেষ</p>
           </div>
         </div>
-        <div className="logo3">
-          <div className="firsts">
-            <img src={first} />
+        <div className="logo">
+          <div className="logo2">
+            <div className="first">
+              <p className="firstone">Moner</p>
+              <p className="firsttwo">Unmesh</p>
+            </div>
+            <div className="left-img">
+              <img src={logo2} alt="Logo" />
+            </div>
+            <div className="last">
+              <p className="lastone">Alternative</p>
+              <p className="lasttwo">Education</p>
+              <p className="lastthree">System</p>
+            </div>
           </div>
-          <div className="seconds">
-            <img src={second} />
+          <div className="logo1">
+            <img className="logo1-img" src={logo1} alt="Logo" />
+            <p className="dialogue3one">সারল্য পূর্ণ নন্দন তত্ত্ব</p>
+            <p className="dialogue3two">পরিপাটি যুক্ত নন্দন তত্ত্বের নিকট</p>
+            <p className="dialogue3three">ময়লা তত্ত্ব হিসেবে পরিচিত।</p>
           </div>
-          <img src={logo2} alt="Logo" />
-          <div className="lasts">
-            <img src={last} />
+          <div className="logo3">
+            <div className="firsts">
+              <img className="firstsone" src={first} />
+              <img className="firststwo" src={second} />
+            </div>
+            <div className="right-img">
+              <img src={logo2} alt="Logo" />
+            </div>
+            <div className="lasts">
+              <img className="lasts-img" src={last} alt="Last Logo" />
+            </div>
           </div>
         </div>
       </div>
+
       <div className="page-container">
         <div className="main-card">
           <div className="hero-section">
@@ -720,7 +718,7 @@ const HomeBengali = () => {
             <br />
             বিষয়বস্তুতে নজর দেওয়া শেখায় না
             <br />
-            নজরের ভিতরে বোধ জাগিয়ে তোলে। 
+            নজরের ভিতরে বোধ জাগিয়ে তোলে।
             <span>।। যোগীরাজ শ্রী অলোক কুমার দাস ।।</span>
           </div>
 

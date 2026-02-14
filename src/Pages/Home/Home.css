@@ -11,6 +11,7 @@
 .dialogue {
   display: flex;
   flex-direction: row;
+  gap: 3vw;
 }
 
 .dialogue1 {
@@ -32,6 +33,44 @@
 }
 
 .dialogue2 {
+  color: #461f05;
+  font-size: 10vw;
+  font-weight: 300;
+  animation: dialogue2Slide 5s ease-out forwards;
+}
+
+@keyframes dialogue2Slide {
+  0% {
+    opacity: 0;
+    transform: translateX(15vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.dialogue3 {
+  margin-bottom: -2vw;
+  color: #461f05;
+  font-size: 10vw;
+  font-weight: 300;
+  animation: dialogue1Slide 5s ease-out forwards;
+}
+
+@keyframes dialogue1Slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-15vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.dialogue4 {
+  margin-bottom: -2vw;
   color: #461f05;
   font-size: 10vw;
   font-weight: 300;
