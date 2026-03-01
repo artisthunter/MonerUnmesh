@@ -54,26 +54,18 @@ const HomeBengali = () => {
   const interval = 3000;
   const [showButton, setShowButton] = useState(false);
   const navigate = useNavigate();
+
   const scrollContainer1Ref = useRef(null);
   const scrollContainer2Ref = useRef(null);
   const scrollContainer3Ref = useRef(null);
   const scrollContainer4Ref = useRef(null);
-  const scrollContainer5Ref = useRef(null);
-  const scrollContainer6Ref = useRef(null);
-  const scrollContainer7Ref = useRef(null);
-  const scrollContainer8Ref = useRef(null);
 
-  const scrollInterval3Ref = useRef(null);
-  const scrollInterval8Ref = useRef(null);
+  const isVideoPlayingRef = useRef(false);
 
   const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
   const [currentIndex3, setCurrentIndex3] = useState(0);
   const [currentIndex4, setCurrentIndex4] = useState(0);
-  const [currentIndex5, setCurrentIndex5] = useState(0);
-  const [currentIndex6, setCurrentIndex6] = useState(0);
-  const [currentIndex7, setCurrentIndex7] = useState(0);
-  const [currentIndex8, setCurrentIndex8] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,6 +79,22 @@ const HomeBengali = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handlePrevious1 = () => {
+    const container = scrollContainer1Ref.current;
+    if (!container) return;
+
+    const images = container.children;
+    const totalImages = images.length;
+    const prevIndex = currentIndex1 === 0 ? totalImages - 1 : currentIndex1 - 1;
+
+    setCurrentIndex1(prevIndex);
+    const targetImage = images[prevIndex];
+    container.scrollTo({
+      left: targetImage.offsetLeft,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const container = scrollContainer1Ref.current;
@@ -107,223 +115,6 @@ const HomeBengali = () => {
 
     return () => clearInterval(scrollInterval);
   }, [currentIndex1]);
-
-  useEffect(() => {
-    const container = scrollContainer2Ref.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex2 + 1) % totalImages;
-
-      setCurrentIndex2(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => clearInterval(scrollInterval);
-  }, [currentIndex2]);
-
-  useEffect(() => {
-    const container = scrollContainer3Ref.current;
-    if (!container) return;
-
-    scrollInterval3Ref.current = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex3 + 1) % totalImages;
-
-      setCurrentIndex3(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => {
-      if (scrollInterval3Ref.current) {
-        clearInterval(scrollInterval3Ref.current);
-      }
-    };
-  }, [currentIndex3]);
-
-  useEffect(() => {
-    const container = scrollContainer4Ref.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex4 + 1) % totalImages;
-
-      setCurrentIndex4(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => clearInterval(scrollInterval);
-  }, [currentIndex4]);
-
-  useEffect(() => {
-    const container = scrollContainer5Ref.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex5 + 1) % totalImages;
-
-      setCurrentIndex5(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => clearInterval(scrollInterval);
-  }, [currentIndex5]);
-
-  useEffect(() => {
-    const container = scrollContainer6Ref.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex6 + 1) % totalImages;
-
-      setCurrentIndex6(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => clearInterval(scrollInterval);
-  }, [currentIndex6]);
-
-  useEffect(() => {
-    const container = scrollContainer7Ref.current;
-    if (!container) return;
-
-    const scrollInterval = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex7 + 1) % totalImages;
-
-      setCurrentIndex7(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => clearInterval(scrollInterval);
-  }, [currentIndex7]);
-
-  useEffect(() => {
-    const container = scrollContainer8Ref.current;
-    if (!container) return;
-
-    scrollInterval8Ref.current = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex8 + 1) % totalImages;
-
-      setCurrentIndex8(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    return () => {
-      if (scrollInterval8Ref.current) {
-        clearInterval(scrollInterval8Ref.current);
-      }
-    };
-  }, [currentIndex8]);
-
-  useEffect(() => {
-    const videos = document.querySelectorAll(
-      ".video1 video, .video2 video, .video3 video, .video4 video",
-    );
-
-    videos.forEach((video) => {
-      const playButton = video.nextElementSibling;
-
-      video.addEventListener("play", () => {
-        if (playButton) playButton.style.display = "none";
-      });
-
-      video.addEventListener("pause", () => {
-        if (playButton) playButton.style.display = "block";
-      });
-
-      video.addEventListener("ended", () => {
-        if (playButton) playButton.style.display = "block";
-      });
-    });
-
-    const observerOptions = {
-      root: null,
-      threshold: 0.5,
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
-
-        if (!entry.isIntersecting && !video.paused) {
-          video.pause();
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions,
-    );
-
-    videos.forEach((video) => {
-      observer.observe(video);
-    });
-
-    // Cleanup
-    return () => {
-      videos.forEach((video) => {
-        observer.unobserve(video);
-      });
-    };
-  }, []);
-
-  const handlePrevious1 = () => {
-    const container = scrollContainer1Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const prevIndex = currentIndex1 === 0 ? totalImages - 1 : currentIndex1 - 1;
-
-    setCurrentIndex1(prevIndex);
-    const targetImage = images[prevIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
 
   const handleNext1 = () => {
     const container = scrollContainer1Ref.current;
@@ -357,6 +148,26 @@ const HomeBengali = () => {
     });
   };
 
+  useEffect(() => {
+    const container = scrollContainer2Ref.current;
+    if (!container) return;
+
+    const scrollInterval = setInterval(() => {
+      const images = container.children;
+      const totalImages = images.length;
+      const nextIndex = (currentIndex2 + 1) % totalImages;
+
+      setCurrentIndex2(nextIndex);
+      const targetImage = images[nextIndex];
+      container.scrollTo({
+        left: targetImage.offsetLeft,
+        behavior: "smooth",
+      });
+    }, interval);
+
+    return () => clearInterval(scrollInterval);
+  }, [currentIndex2]);
+
   const handleNext2 = () => {
     const container = scrollContainer2Ref.current;
     if (!container) return;
@@ -388,6 +199,26 @@ const HomeBengali = () => {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    const container = scrollContainer3Ref.current;
+    if (!container) return;
+
+    const scrollInterval = setInterval(() => {
+      const images = container.children;
+      const totalImages = images.length;
+      const nextIndex = (currentIndex3 + 1) % totalImages;
+
+      setCurrentIndex3(nextIndex);
+      const targetImage = images[nextIndex];
+      container.scrollTo({
+        left: targetImage.offsetLeft,
+        behavior: "smooth",
+      });
+    }, interval);
+
+    return () => clearInterval(scrollInterval);
+  }, [currentIndex3]);
 
   const handleNext3 = () => {
     const container = scrollContainer3Ref.current;
@@ -421,6 +252,28 @@ const HomeBengali = () => {
     });
   };
 
+  useEffect(() => {
+    const container = scrollContainer4Ref.current;
+    if (!container) return;
+
+    const scrollInterval = setInterval(() => {
+      if (isVideoPlayingRef.current) return;
+
+      const images = container.children;
+      const totalImages = images.length;
+      const nextIndex = (currentIndex4 + 1) % totalImages;
+
+      setCurrentIndex4(nextIndex);
+      const targetImage = images[nextIndex];
+      container.scrollTo({
+        left: targetImage.offsetLeft,
+        behavior: "smooth",
+      });
+    }, interval);
+
+    return () => clearInterval(scrollInterval);
+  }, [currentIndex4]);
+
   const handleNext4 = () => {
     const container = scrollContainer4Ref.current;
     if (!container) return;
@@ -437,211 +290,12 @@ const HomeBengali = () => {
     });
   };
 
-  const handlePrevious5 = () => {
-    const container = scrollContainer5Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const prevIndex = currentIndex5 === 0 ? totalImages - 1 : currentIndex5 - 1;
-
-    setCurrentIndex5(prevIndex);
-    const targetImage = images[prevIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
+  const handleVideoPlay = () => {
+    isVideoPlayingRef.current = true;
   };
 
-  const handleNext5 = () => {
-    const container = scrollContainer5Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const nextIndex = (currentIndex5 + 1) % totalImages;
-
-    setCurrentIndex5(nextIndex);
-    const targetImage = images[nextIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handlePrevious6 = () => {
-    const container = scrollContainer6Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const prevIndex = currentIndex6 === 0 ? totalImages - 1 : currentIndex6 - 1;
-
-    setCurrentIndex6(prevIndex);
-    const targetImage = images[prevIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handleNext6 = () => {
-    const container = scrollContainer6Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const nextIndex = (currentIndex6 + 1) % totalImages;
-
-    setCurrentIndex6(nextIndex);
-    const targetImage = images[nextIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handlePrevious7 = () => {
-    const container = scrollContainer7Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const prevIndex = currentIndex7 === 0 ? totalImages - 1 : currentIndex7 - 1;
-
-    setCurrentIndex7(prevIndex);
-    const targetImage = images[prevIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handleNext7 = () => {
-    const container = scrollContainer7Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const nextIndex = (currentIndex7 + 1) % totalImages;
-
-    setCurrentIndex7(nextIndex);
-    const targetImage = images[nextIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handlePrevious8 = () => {
-    const container = scrollContainer8Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const prevIndex = currentIndex8 === 0 ? totalImages - 1 : currentIndex8 - 1;
-
-    setCurrentIndex8(prevIndex);
-    const targetImage = images[prevIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handleNext8 = () => {
-    const container = scrollContainer8Ref.current;
-    if (!container) return;
-
-    const images = container.children;
-    const totalImages = images.length;
-    const nextIndex = (currentIndex8 + 1) % totalImages;
-
-    setCurrentIndex8(nextIndex);
-    const targetImage = images[nextIndex];
-    container.scrollTo({
-      left: targetImage.offsetLeft,
-      behavior: "smooth",
-    });
-  };
-
-  const handleVideoPlay1 = () => {
-    if (scrollInterval3Ref.current) {
-      clearInterval(scrollInterval3Ref.current);
-      scrollInterval3Ref.current = null;
-    }
-
-    if (scrollInterval8Ref.current) {
-      clearInterval(scrollInterval8Ref.current);
-      scrollInterval8Ref.current = null;
-    }
-  };
-
-  const handleVideoPause1 = () => {
-    if (scrollInterval3Ref.current) {
-      clearInterval(scrollInterval3Ref.current);
-    }
-
-    const container1 = scrollContainer3Ref.current;
-    if (!container1) return;
-
-    scrollInterval3Ref.current = setInterval(() => {
-      const images = container1.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex3 + 1) % totalImages;
-
-      setCurrentIndex3(nextIndex);
-      const targetImage = images[nextIndex];
-      container1.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-
-    const container2 = scrollContainer8Ref.current;
-    if (!container2) return;
-
-    scrollInterval8Ref.current = setInterval(() => {
-      const images = container2.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex8 + 1) % totalImages;
-
-      setCurrentIndex8(nextIndex);
-      const targetImage = images[nextIndex];
-      container2.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
-  };
-
-  const handleVideoPlay2 = () => {
-    if (scrollInterval8Ref.current) {
-      clearInterval(scrollInterval8Ref.current);
-      scrollInterval8Ref.current = null;
-    }
-  };
-
-  const handleVideoPause2 = () => {
-    if (scrollInterval8Ref.current) {
-      clearInterval(scrollInterval8Ref.current);
-    }
-
-    const container = scrollContainer8Ref.current;
-    if (!container) return;
-
-    scrollInterval8Ref.current = setInterval(() => {
-      const images = container.children;
-      const totalImages = images.length;
-      const nextIndex = (currentIndex8 + 1) % totalImages;
-
-      setCurrentIndex8(nextIndex);
-      const targetImage = images[nextIndex];
-      container.scrollTo({
-        left: targetImage.offsetLeft,
-        behavior: "smooth",
-      });
-    }, interval);
+  const handleVideoPause = () => {
+    isVideoPlayingRef.current = false;
   };
 
   return (
@@ -794,6 +448,13 @@ const HomeBengali = () => {
             </ul>
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="pic2">
+                <img src={pic2} alt="pic2" />
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <MessageCircleQuestionMark size={32} color="white" />
@@ -875,6 +536,13 @@ const HomeBengali = () => {
                 neuroscience.
               </li>
             </ul>
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic3">
+                  <img src={pic3} alt="pic3" />
+                </div>
+              </div>
+            </div>
             <br />
             <strong>
               এইসব প্রথম সারির শিক্ষা প্রতিষ্ঠানগুলোতে Cognitive science এর যে
@@ -908,6 +576,14 @@ const HomeBengali = () => {
             সূত্রাকারে ভারতীয় দর্শন শাস্ত্র হিরণ্যগর্ভের ন্যায় ধারন করে আছে।
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="video2">
+                <video src={video2} playsInline controls />
+                <div className="play-button"></div>
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <CircleQuestionMark size={32} color="white" />
@@ -977,6 +653,31 @@ const HomeBengali = () => {
             question " হলেও ভারতীয় শিক্ষাব্যবস্থায় কিন্তু প্রায় অনুপস্থিত।
           </p>
 
+          <div className="image-section">
+            <button
+              className="scroll-button scroll-button-left"
+              onClick={handlePrevious1}
+            >
+              &#8249;
+            </button>
+            <div className="image-scroll-container" ref={scrollContainer1Ref}>
+              <div className="pic7">
+                <img src={pic7} alt="pic7" />
+              </div>
+              <div className="pic8">
+                <img src={pic8} alt="pic8" />
+              </div>
+              <div className="pic9">
+                <img src={pic9} alt="pic9" />
+              </div>
+            </div>
+            <button
+              className="scroll-button scroll-button-right"
+              onClick={handleNext1}
+            >
+              &#8250;
+            </button>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <Goal size={32} color="white" />
@@ -1025,6 +726,31 @@ const HomeBengali = () => {
             </ul>
           </p>
 
+          <div className="image-section">
+            <button
+              className="scroll-button scroll-button-left"
+              onClick={handlePrevious2}
+            >
+              &#8249;
+            </button>
+            <div className="image-scroll-container" ref={scrollContainer2Ref}>
+              <div className="pic10">
+                <img src={pic10} alt="pic10" />
+              </div>
+              <div className="pic11">
+                <img src={pic11} alt="pic11" />
+              </div>
+              <div className="pic14">
+                <img src={pic14} alt="pic14" />
+              </div>
+            </div>
+            <button
+              className="scroll-button scroll-button-right"
+              onClick={handleNext2}
+            >
+              &#8250;
+            </button>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <Cpu size={32} color="white" />
@@ -1103,6 +829,13 @@ const HomeBengali = () => {
             </ul>
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="pic1">
+                <img src={pic1} alt="pic1" />
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <BookOpen size={32} color="white" />
@@ -1184,6 +917,13 @@ const HomeBengali = () => {
               <li>অজ্ঞান = আচ্ছাদন (পর্দা ) = অবিদ্যা।</li>
             </ul>
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic5">
+                  <img src={pic5} alt="pic5" />
+                </div>
+              </div>
+            </div>
             <strong>শিক্ষা সম্বন্ধে কগনিটিভ সায়েন্স কি বলে :-</strong>
             <ul className="clean-list">
               <li>
@@ -1260,6 +1000,13 @@ const HomeBengali = () => {
             <span style={{ fontSize: "22px" }}>।।যোগীরাজ অলোক কুমার দাস।।</span>
             <br />
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic4">
+                  <img src={pic4} alt="pic4" />
+                </div>
+              </div>
+            </div>
             <strong>কেন এই পদ্ধতি আজ এত জরুরি :- </strong>
             <br />
             <br />
@@ -1304,6 +1051,13 @@ const HomeBengali = () => {
               <li>শিক্ষিত হয় কিন্তু নির্মম হয়।</li>
             </ul>
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic12">
+                  <img src={pic12} alt="pic12" />
+                </div>
+              </div>
+            </div>
             <strong> মনের উন্মেষের সংক্ষিপ্ত শিক্ষন পদ্ধতি :- </strong>
             <br />
             <br />
@@ -1385,6 +1139,13 @@ const HomeBengali = () => {
             সংযোগ ঘটবে আর এই সংযোগই হল জ্ঞান। তাই বলা হয় জ্ঞান বাড়ানো যায় না।
             <br />
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic13">
+                  <img src={pic13} alt="pic13" />
+                </div>
+              </div>
+            </div>
             <strong>এখন প্রশ্ন :-</strong>
             <ul className="clean-list">
               <li>যে চেতনার সাথে সংযোগের কথা বলা হচ্ছে এই চেতনা কি? </li>
@@ -1469,6 +1230,13 @@ const HomeBengali = () => {
             শেখায়।
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="pic6">
+                <img src={pic6} alt="pic6" />
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <Eye size={32} color="white" />
@@ -1578,6 +1346,14 @@ const HomeBengali = () => {
             </li>
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="video2">
+                <video src={video2} playsInline controls />
+                <div className="play-button"></div>
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <FingerprintPattern size={32} color="white" />
@@ -1649,6 +1425,13 @@ const HomeBengali = () => {
               <li>স্লোগান : জিজ্ঞাশাই শিক্ষার শিকড়।</li>
             </ul>
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic18">
+                  <img src={pic18} alt="pic18" />
+                </div>
+              </div>
+            </div>
             <strong> ৯ - ১২ বছর বয়স &gt;&gt; </strong>
             <ul className="clean-list">
               <li>প্রধান বাধা : প্রতীক আগে, অভিজ্ঞতা পরে।</li>
@@ -1682,6 +1465,13 @@ const HomeBengali = () => {
               <li>স্লোগান : প্রতিযোগিতা নয় সহমর্মিতাই শ্রেয়।</li>
             </ul>
             <br />
+            <div className="image-section">
+              <div className="image-scroll-container">
+                <div className="pic19">
+                  <img src={pic19} alt="pic19" />
+                </div>
+              </div>
+            </div>
             <strong>কিশোর-কিশোরী &gt;&gt;</strong>
             <ul className="clean-list">
               <li>প্রধান বাধা : সঠিক উত্তরে আসক্তি।</li>
@@ -1724,6 +1514,13 @@ const HomeBengali = () => {
             </li>
           </p>
 
+          <div className="image-section">
+            <div className="image-scroll-container">
+              <div className="pic15">
+                <img src={pic15} alt="pic15" />
+              </div>
+            </div>
+          </div>
           <h2 className="section-header">
             <div className="icon-wrapper">
               <ScanEye size={32} color="white" />
@@ -1797,140 +1594,11 @@ const HomeBengali = () => {
           <div className="image-section">
             <button
               className="scroll-button scroll-button-left"
-              onClick={handlePrevious1}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer1Ref}>
-              <div className="pic1">
-                <img src={pic1} alt="pic1" />
-              </div>
-              <div className="pic2">
-                <img src={pic2} alt="pic2" />
-              </div>
-              <div className="pic3">
-                <img src={pic3} alt="pic3" />
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext1}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
-              onClick={handlePrevious2}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer2Ref}>
-              <div className="pic4">
-                <img src={pic4} alt="pic4" />
-              </div>
-              <div className="pic5">
-                <img src={pic5} alt="pic5" />
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext2}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
-              onClick={handlePrevious5}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer5Ref}>
-              <div className="pic12">
-                <img src={pic12} alt="pic12" />
-              </div>
-              <div className="pic13">
-                <img src={pic13} alt="pic13" />
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext5}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
               onClick={handlePrevious3}
             >
               &#8249;
             </button>
             <div className="image-scroll-container" ref={scrollContainer3Ref}>
-              <div className="pic6">
-                <img src={pic6} alt="pic6" />
-              </div>
-              <div className="video2">
-                <video
-                  src={video2}
-                  playsInline
-                  controls
-                  onPlay={handleVideoPlay1}
-                  onPause={handleVideoPause1}
-                  onEnded={handleVideoPause1}
-                />
-                <div className="play-button"></div>
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext3}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
-              onClick={handlePrevious7}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer7Ref}>
-              <div className="pic18">
-                <img src={pic18} alt="pic18" />
-              </div>
-              <div className="pic19">
-                <img src={pic19} alt="pic19" />
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext7}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
-              onClick={handlePrevious6}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer6Ref}>
-              <div className="pic15">
-                <img src={pic15} alt="pic15" />
-              </div>
               <div className="pic16">
                 <img src={pic16} alt="pic16" />
               </div>
@@ -1940,42 +1608,7 @@ const HomeBengali = () => {
             </div>
             <button
               className="scroll-button scroll-button-right"
-              onClick={handleNext6}
-            >
-              &#8250;
-            </button>
-          </div>
-
-          <div className="image-section">
-            <button
-              className="scroll-button scroll-button-left"
-              onClick={handlePrevious4}
-            >
-              &#8249;
-            </button>
-            <div className="image-scroll-container" ref={scrollContainer4Ref}>
-              <div className="pic7">
-                <img src={pic7} alt="pic7" />
-              </div>
-              <div className="pic8">
-                <img src={pic8} alt="pic8" />
-              </div>
-              <div className="pic9">
-                <img src={pic9} alt="pic9" />
-              </div>
-              <div className="pic10">
-                <img src={pic10} alt="pic10" />
-              </div>
-              <div className="pic11">
-                <img src={pic11} alt="pic11" />
-              </div>
-              <div className="pic14">
-                <img src={pic14} alt="pic14" />
-              </div>
-            </div>
-            <button
-              className="scroll-button scroll-button-right"
-              onClick={handleNext4}
+              onClick={handleNext3}
             >
               &#8250;
             </button>
@@ -1990,11 +1623,11 @@ const HomeBengali = () => {
           <div className="image-section">
             <button
               className="scroll-button scroll-button-left"
-              onClick={handlePrevious8}
+              onClick={handlePrevious4}
             >
               &#8249;
             </button>
-            <div className="image-scroll-container" ref={scrollContainer8Ref}>
+            <div className="image-scroll-container" ref={scrollContainer4Ref}>
               <div className="pic20">
                 <img src={pic20} alt="pic20" />
               </div>
@@ -2003,9 +1636,9 @@ const HomeBengali = () => {
                   src={video3}
                   playsInline
                   controls
-                  onPlay={handleVideoPlay2}
-                  onPause={handleVideoPause2}
-                  onEnded={handleVideoPause2}
+                  onPlay={handleVideoPlay}
+                  onPause={handleVideoPause}
+                  onEnded={handleVideoPause}
                 />
                 <div className="play-button"></div>
               </div>
@@ -2014,16 +1647,16 @@ const HomeBengali = () => {
                   src={video4}
                   playsInline
                   controls
-                  onPlay={handleVideoPlay2}
-                  onPause={handleVideoPause2}
-                  onEnded={handleVideoPause2}
+                  onPlay={handleVideoPlay}
+                  onPause={handleVideoPause}
+                  onEnded={handleVideoPause}
                 />
                 <div className="play-button"></div>
               </div>
             </div>
             <button
               className="scroll-button scroll-button-right"
-              onClick={handleNext8}
+              onClick={handleNext4}
             >
               &#8250;
             </button>
