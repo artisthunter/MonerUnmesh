@@ -2,7 +2,7 @@
 
 A modern and responsive personal portfolio website designed to showcase my skills, projects, experience, and journey as a developer.
 
-🌐 **Live Website:** https://mou-taupe.vercel.app/
+🌐 **Live Website:** https://monerunmesh.vercel.app/
 
 ---
 
@@ -140,7 +140,7 @@ This project was created to:
 
 ### Moner Unmesh
 
-🌐 Portfolio: https://mou-taupe.vercel.app/
+🌐 Portfolio: https://monerunmesh.vercel.app/
 
 ---
 
