@@ -108,7 +108,7 @@ The application will be available at the local development URL shown in your ter
 
 Visit the deployed portfolio:
 
-**https://mou-taupe.vercel.app/**
+**https://monerunmesh.vercel.app/**
 
 ---
 
