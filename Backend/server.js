@@ -8,14 +8,15 @@ import admissionRouter from "./Routes/AdmissionRoute.js";
 import recruitmentRouter from "./Routes/RecruitmentRoute.js";
 import donationRouter from "./Routes/DonationRoute.js";
 
-dotenv.config();
+dotenv.config({ path: "./Config/.env" });
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://monerunmesh.vercel.app/",
     credentials: true,
   }),
 );

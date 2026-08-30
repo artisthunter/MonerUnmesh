@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const querySchema = new mongoose.Schema({
+const collaborationSchema = new mongoose.Schema({
   name: { type: String, required: true },
   age: { type: Number, required: true },
   gender: { type: String, required: true },
@@ -17,7 +17,7 @@ const querySchema = new mongoose.Schema({
   institutionFile: { type: String, required: false },
 });
 
-const queryModel =
-  mongoose.models.query || mongoose.model("query", querySchema);
+const collaborationModel =
+  mongoose.models.collaboration || mongoose.model("collaboration", collaborationSchema);
 
-export default queryModel;
+export default collaborationModel;

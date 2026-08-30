@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const querySchema = new mongoose.Schema({
+const recruitmentSchema = new mongoose.Schema({
   name: { type: String, required: true },
   fatherName: { type: String, required: true },
   presentAddress: { type: String, required: true },
@@ -27,7 +27,7 @@ const querySchema = new mongoose.Schema({
   referenceCertificate: { type: String, required: true },
 });
 
-const queryModel =
-  mongoose.models.query || mongoose.model("query", querySchema);
+const recruitmentModel =
+  mongoose.models.recruitment || mongoose.model("recruitment", recruitmentSchema);
 
-export default queryModel;
+export default recruitmentModel;

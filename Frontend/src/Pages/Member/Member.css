@@ -5,25 +5,30 @@
   min-height: 100vh;
 }
 
-.header {
+.members-page .header {
   background-color: #fffbeb;
   color: #333;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.header h1 {
+.members-page .header h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
-  margin: 30px auto 0px auto;
+  margin: 0 0 10px 0 !important;
+  padding: 0;
   text-align: center;
 }
 
-.container {
+.members-page .container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 

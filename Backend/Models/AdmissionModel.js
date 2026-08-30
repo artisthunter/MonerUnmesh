@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const querySchema = new mongoose.Schema({
+const admissionSchema = new mongoose.Schema({
   studentName: { type: String, required: true },
   aadhaarNo: { type: String, required: true },
   dob: { type: Date, required: true },
@@ -46,7 +46,7 @@ const querySchema = new mongoose.Schema({
   declarationDate: { type: Date, required: true },
 });
 
-const queryModel =
-  mongoose.models.query || mongoose.model("query", querySchema);
+const admissionModel =
+  mongoose.models.admission || mongoose.model("admission", admissionSchema);
 
-export default queryModel;
+export default admissionModel;
