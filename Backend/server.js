@@ -18,6 +18,7 @@ app.use(
   cors({
     origin: "https://monerunmesh.vercel.app/",
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   }),
 );
 
