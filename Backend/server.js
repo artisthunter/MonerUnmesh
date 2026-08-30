@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://monerunmesh.vercel.app/",
+    origin: "https://monerunmesh.vercel.app",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
