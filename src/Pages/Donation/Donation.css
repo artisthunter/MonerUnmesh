@@ -1,0 +1,438 @@
+/*All form's css size are controlled by Collaboration.css*/
+
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  background-color: #fffbeb;
+  padding: 20px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fffbeb;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.form-header {
+  background: #fffbeb;
+  color: black;
+  padding: 40px 30px 10px 30px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: absolute;
+  gap: 20px;
+  margin-top: 10px;
+  left: 70px;
+}
+
+.header-logo {
+  width: 180px;
+  height: 130px;
+}
+
+.form-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-header h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.donation-form {
+  padding: 40px 30px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h3 {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+.section-description {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fffbeb;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: black;
+  background: #fffbeb;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fffbeb;
+}
+
+.checkbox-label:hover {
+  background: #fef3c7;
+  border-color: black;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: black;
+}
+
+.checkbox-label span {
+  color: black;
+  font-size: 1rem;
+}
+
+.others-details {
+  animation: slideDown 0.3s ease;
+  margin-top: 10px;
+  margin-left: 32px;
+}
+
+.others-details textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fffbeb;
+  resize: vertical;
+}
+
+.others-details textarea:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.bank-details-container {
+  animation: slideDown 0.3s ease;
+  margin-top: 15px;
+  padding: 20px;
+  background: #fffbeb;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.bank-details-container h4 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.bank-account {
+  margin-bottom: 20px;
+}
+
+.bank-account-title {
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.bank-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bank-info-item {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bank-info-label {
+  font-weight: 600;
+  color: #555;
+  min-width: 150px;
+  font-size: 1.2rem;
+}
+
+.bank-info-value {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.desktop-contact-info {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mobile-contact-info {
+  display: none;
+}
+
+.contact-info-container {
+  position: relative !important;
+  top: auto !important;
+  left: -10px;
+}
+
+@media (min-width: 835px) {
+  .contact-info-container {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 835px) {
+  .logo-container {
+    top: 35px;
+    left: 55px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 100px;
+  }
+
+  .desktop-contact-info {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0px 20px 0px 45px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 680px) {
+  .logo-container {
+    top: 35px;
+    left: 55px;
+  }
+
+  .form-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 630px) {
+  .logo-container {
+    top: 35px;
+    left: 55px;
+  }
+
+  .form-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    top: 35px;
+    left: 55px;
+  }
+
+  .form-header h1 {
+    font-size: 2rem;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 570px) {
+  .logo-container {
+    top: 35px;
+    left: 55px;
+  }
+
+  .form-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .header-logo {
+    width: 80px;
+    height: 85px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo-container {
+    top: 35px;
+    left: 70px;
+  }
+
+  .form-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-logo {
+    width: 65px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 430px) {
+  .bank-info-label,
+  .bank-info-value {
+    font-size: 15px;
+  }
+
+  .bank-info-label {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 360px) {
+  .bank-info-label,
+  .bank-info-value {
+    font-size: 15px;
+  }
+
+  .bank-info-label {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  .bank-info-label,
+  .bank-info-value {
+    font-size: 15px;
+  }
+
+  .bank-info-label {
+    min-width: 60px;
+  }
+}

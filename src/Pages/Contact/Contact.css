@@ -1,0 +1,86 @@
+body {
+  background-color: #fffbeb;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fffbeb;
+  min-height: 100vh;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.contact-subtitle {
+  color: black;
+  font-size: 1.4rem;
+}
+
+.contact-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-category {
+  margin-bottom: 1rem;
+}
+
+.contact-category-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5rem;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-name {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0;
+}
+
+.contact-number {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
