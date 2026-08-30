@@ -8,7 +8,7 @@ import admissionRouter from "./Routes/AdmissionRoute.js";
 import recruitmentRouter from "./Routes/RecruitmentRoute.js";
 import donationRouter from "./Routes/DonationRoute.js";
 
-dotenv.config({ path: "./Config/.env" });
+dotenv.config;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
