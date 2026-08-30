@@ -1,8 +1,6 @@
 import donationModel from "../Models/DonationModel.js";
 
 const submit = async (req, res) => {
-  const url = "https://monerunmesh.vercel.app/";
-
   try {
     const form = new donationModel({
       name: req.body.name,
@@ -22,4 +20,4 @@ const submit = async (req, res) => {
   }
 };
 
-export { submit };
+export default submit;

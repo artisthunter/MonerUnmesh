@@ -1,8 +1,6 @@
 import recruitmentModel from "../Models/RecruitmentModel.js";
 
 const submit = async (req, res) => {
-  const url = "https://monerunmesh.vercel.app/";
-
   try {
     const form = new recruitmentModel({
       name: req.body.name,
@@ -40,4 +38,4 @@ const submit = async (req, res) => {
   }
 };
 
-export { submit };
+export default submit;

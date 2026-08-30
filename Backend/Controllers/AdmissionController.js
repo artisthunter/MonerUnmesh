@@ -1,8 +1,6 @@
 import admissionModel from "../Models/AdmissionModel.js";
 
 const submit = async (req, res) => {
-  const url = "https://monerunmesh.vercel.app/";
-
   try {
     const form = new admissionModel({
       studentName: req.body.studentName,
@@ -59,4 +57,4 @@ const submit = async (req, res) => {
   }
 };
 
-export { submit };
+export default submit;

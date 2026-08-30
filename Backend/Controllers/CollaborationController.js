@@ -1,8 +1,6 @@
 import collaborationModel from "../Models/CollaborationModel.js";
 
 const submit = async (req, res) => {
-  const url = "https://monerunmesh.vercel.app/";
-
   try {
     const form = new collaborationModel({
       name: req.body.name,
@@ -33,4 +31,4 @@ const submit = async (req, res) => {
   }
 };
 
-export { submit };
+export default submit;
