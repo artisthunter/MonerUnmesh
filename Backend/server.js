@@ -7,6 +7,7 @@ import collaborationRouter from "./Routes/CollaborationRoute.js";
 import admissionRouter from "./Routes/AdmissionRoute.js";
 import recruitmentRouter from "./Routes/RecruitmentRoute.js";
 import donationRouter from "./Routes/DonationRoute.js";
+import visitorRouter from "./Routes/VisitorRoute.js";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use("/api/collaboration", collaborationRouter);
 app.use("/api/admission", admissionRouter);
 app.use("/api/recruitment", recruitmentRouter);
 app.use("/api/donation", donationRouter);
+app.use("/api/visitor", visitorRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running");
