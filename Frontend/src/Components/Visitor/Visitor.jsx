@@ -63,8 +63,12 @@ const Visitor = () => {
 
     const visitorId = getVisitorId();
 
-    trackVisitor();
-    fetchVisitorStats();
+    const initializeVisitor = async () => {
+      await trackVisitor();
+      await fetchVisitorStats();
+    };
+
+    initializeVisitor();
 
     const heartbeatInterval = setInterval(() => {
       trackVisitor();
@@ -92,7 +96,6 @@ const Visitor = () => {
     return () => {
       clearInterval(heartbeatInterval);
       clearInterval(statsInterval);
-
       window.removeEventListener("beforeunload", handleUnload);
     };
   }, [url]);
@@ -117,11 +120,6 @@ const Visitor = () => {
       <div className="vd-item">
         <span>This Year Visitors:</span>
         <CountUp start={0} end={data.year} duration={1.2} />
-      </div>
-
-      <div className="vd-item">
-        <span>All Visitors:</span>
-        <CountUp start={0} end={data.allTime} duration={1.2} />
       </div>
     </div>
   );
