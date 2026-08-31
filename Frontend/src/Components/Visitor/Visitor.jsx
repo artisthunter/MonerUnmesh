@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
-import { StoreContext } from ".././Context/StoreContext";
+import { StoreContext } from "../../Context/StoreContext";
 import axios from "axios";
 import "./Visitor.css";
 
