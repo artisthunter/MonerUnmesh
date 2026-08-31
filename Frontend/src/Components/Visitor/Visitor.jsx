@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import CountUp from "react-countup";
 import { StoreContext } from "../../Context/StoreContext";
 import axios from "axios";
